@@ -1,0 +1,19 @@
+
+{
+  "manifest_version": 3,
+  "name": "Lấy câu hỏi LMS",
+  "version": "1.0",
+  "description": "Trích xuất câu hỏi và đáp án từ hệ thống LMS.",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["https://lms.ictu.edu.vn"],
+  "content_scripts": [
+    {
+      "matches": ["https://lms.ictu.edu.vn/assignment/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
+

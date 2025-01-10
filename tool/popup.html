@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extension</title>
+  <script src="scripts/mammoth.browser.min.js"></script>
+  <style>
+    body {
+      width: 500px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      font-size: 20px;
+      color: #007BFF;
+      margin-bottom: 10px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    button {
+      margin: 5px 0;
+      padding: 8px 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #fff;
+      background-color: #007BFF;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    input[type="file"] {
+      margin: 10px 0;
+    }
+    #outputContainer {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    #outputContainer div {
+      margin-bottom: 15px;
+    }
+    #searchResults {
+      max-width: 480px;
+      width: 480px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 16px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+      border-radius: 5px;
+      overflow-wrap: break-word;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lấy Dữ Liệu</h1>
+
+  <input type="file" id="wordFile" accept=".docx">
+  <button id="loadFileButton">Tải File</button> <br>
+  <button id="getDataButton">Thêm</button>
+  <button id="copyDataButton">Sao chép</button>
+  <button id="clearDataButton">Xóa Dữ Liệu</button>
+  <button id="searchButton">Tìm Kiếm</button>
+  <div id="searchResults"></div>
+  <div id="outputContainer">
+    <!-- Nội dung sẽ được hiển thị tại đây -->
+  </div>
+
+  <script src="popup2.js"></script>
+</body>
+</html>
